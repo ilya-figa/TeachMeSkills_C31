@@ -1,15 +1,43 @@
+import lesson_3.Lesson3Tasks;
+import lesson_3.Utils;
+
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    private static final int MIN = -10;
+    private static final int MAX = 10;
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        int sizeArray = scanner.nextInt();
+        int[] arrayInt = Utils.generatRndArray(sizeArray, MIN, MAX);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.print("array = ");
+        Utils.printArray(arrayInt);
+
+        System.out.println("----------------------------TASK 1----------------------------");
+        Lesson3Tasks.resulTask1(arrayInt);
+        System.out.println("----------------------------TASK 2----------------------------");
+        Lesson3Tasks.resulTask2(arrayInt);
+        System.out.println("----------------------------TASK 3----------------------------");
+        Lesson3Tasks.resulTask3(arrayInt);
+        System.out.println("----------------------------TASK 4----------------------------");
+        Lesson3Tasks.resulTask4(arrayInt);
+        System.out.println("----------------------------TASK 5----------------------------");
+        Lesson3Tasks.resulTask5(arrayInt.clone());
+        System.out.println("----------------------------TASK 6----------------------------");
+        Lesson3Tasks.resulTask6(arrayInt);
+        System.out.println("----------------------------Additional task----------------------------");
+        //Первый способ через рекурсию
+        Lesson3Tasks.additionalTask_v1(new int[]{1,2,3});
+        Lesson3Tasks.additionalTask_v1(new int[]{1,2,9});
+        Lesson3Tasks.additionalTask_v1(new int[]{1,9,9});
+        Lesson3Tasks.additionalTask_v1(new int[]{9,9,9});
+        //Второй способ через строки
+        Lesson3Tasks.additionalTask_v2(new int[]{1,2,3});
+        Lesson3Tasks.additionalTask_v2(new int[]{1,2,9});
+        Lesson3Tasks.additionalTask_v2(new int[]{1,9,9});
+        Lesson3Tasks.additionalTask_v2(new int[]{9,9,9});
     }
 }
