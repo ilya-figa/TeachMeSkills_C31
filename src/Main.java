@@ -1,5 +1,5 @@
 import lesson_3.Lesson3Tasks;
-import lesson_3.Utils;
+import lesson_3.Lesson3Utils;
 
 import java.util.Scanner;
 
@@ -11,10 +11,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sizeArray = scanner.nextInt();
-        int[] arrayInt = Utils.generatRndArray(sizeArray, MIN, MAX);
+        int[] arrayInt = Lesson3Utils.generatRndArray(sizeArray, MIN, MAX);
 
         System.out.print("array = ");
-        Utils.printArray(arrayInt);
+        Lesson3Utils.printArray(arrayInt);
 
         System.out.println("----------------------------TASK 1----------------------------");
         Lesson3Tasks.resulTask1(arrayInt);
