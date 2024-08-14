@@ -15,15 +15,18 @@ public class Lesson5Tasks {
      * 1.2 Добавить к каждому значению число, которое пользователь будет вводить с консоли.
      * 1.3 Найти сумму всех получившихся элементов и вывести в консоль.
      */
-    public static void resulTask1(Scanner scanner) {
+    public static int getResulTask1(Scanner scanner) {
         int[][] matrixInt = generateRndMatrix(3,4, -10, 10);
         System.out.println("matrix = ");
+        int sum = 0;
         for (int i = 0; i < matrixInt.length; i++) {
             for (int j = 0; j < matrixInt[i].length; j++) {
                 matrixInt[i][j] += scanner.nextInt();
+                sum += matrixInt[i][j];
             }
         }
         Lesson5Utils.printMatrix(matrixInt);
+        return sum;
     }
 
     public static int[][] generateRndMatrix(int linesSizeArray,int columnsSizeArray, int min, int max) {
