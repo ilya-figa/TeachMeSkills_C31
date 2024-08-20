@@ -1,4 +1,4 @@
-package lesson7.task1;
+package lesson9.task1;
 
 /**
  * @author Buyevich_I

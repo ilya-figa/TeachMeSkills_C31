@@ -1,5 +1,5 @@
-import lesson7.task1.*;
-import lesson7.task2.*;
+import lesson9.task1.*;
+import lesson9.task2.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
