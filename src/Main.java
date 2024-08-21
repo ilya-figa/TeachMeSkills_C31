@@ -15,13 +15,13 @@ public class Main {
         Если план лечения имеет любой другой код – назначить терапевта и выполнить метод лечить.
         */
         Clinics clinics = new Clinics(new Therapist(new Surgeon(), new Dentist()));
-        clinics.addPatient(new Patient(1));
-        clinics.addPatient(new Patient(2));
-        clinics.addPatient(new Patient(1));
-        clinics.addPatient(new Patient(0));
-        clinics.addPatient(new Patient(3));
-        clinics.addPatient(new Patient(1));
-        clinics.addPatient(new Patient(2));
+        clinics.addPatient(1);
+        clinics.addPatient(2);
+        clinics.addPatient(1);
+        clinics.addPatient(0);
+        clinics.addPatient(3);
+        clinics.addPatient(1);
+        clinics.addPatient(2);
         for(Patient patient: clinics.getPatientList()){
             clinics.getTherapist().appointDoctor(patient);
             System.out.println(patient.getDoctor().treat());

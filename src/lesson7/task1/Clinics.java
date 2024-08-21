@@ -16,6 +16,10 @@ public class Clinics {
         patientList.add(patient);
     }
 
+    public void addPatient(int treatmentPlan){
+        this.addPatient(new Patient(treatmentPlan));
+    }
+
     public List<Patient> getPatientList(){
         return patientList;
     }
