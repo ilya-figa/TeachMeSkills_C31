@@ -1,6 +1,5 @@
 import lesson_3.Lesson3Tasks;
 import lesson_3.Lesson3Utils;
-import lesson_3.Utils;
 
 import java.util.Scanner;
 
