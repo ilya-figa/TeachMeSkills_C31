@@ -12,7 +12,7 @@ public class Lesson3Tasks {
      * Пройти по массиву, вывести все элементы в прямом и в обратном порядке.
      */
     public static void resulTask1(int[] arrayInt) {
-        Utils.printArray(arrayInt);
+        Lesson3Utils.printArray(arrayInt);
 
         for (int i = arrayInt.length-1; i >= 0; i--) {
             System.out.print(arrayInt[i] + " ");
@@ -89,7 +89,7 @@ public class Lesson3Tasks {
             arrayInt[j] = arrayInt[i] - arrayInt[j];
             arrayInt[i] -= arrayInt[j];
         }
-        Utils.printArray(arrayInt);
+        Lesson3Utils.printArray(arrayInt);
     }
 
     /**
@@ -121,10 +121,10 @@ public class Lesson3Tasks {
      * Output: [1,0,0,0]
      */
     public static void additionalTask_v1(int[] arrayInt) {
-        Utils.printArray(arrayInt);
+        Lesson3Utils.printArray(arrayInt);
         arrayInt[arrayInt.length - 1]++;
         arrayInt = recursionAdditionalTask(arrayInt, arrayInt.length - 1);
-        Utils.printArray(arrayInt);
+        Lesson3Utils.printArray(arrayInt);
         System.out.println("----------------------------");
     }
 
@@ -151,7 +151,7 @@ public class Lesson3Tasks {
      * @param arrayInt массив
      */
     public static void additionalTask_v2(int[] arrayInt) {
-        Utils.printArray(arrayInt);
+        Lesson3Utils.printArray(arrayInt);
         StringBuilder sb = new StringBuilder();
         for (int j : arrayInt) {
             sb.append(j);
@@ -167,7 +167,7 @@ public class Lesson3Tasks {
             arrayInt[i] = Character.getNumericValue(sb.charAt(i));
         }
 
-        Utils.printArray(arrayInt);
+        Lesson3Utils.printArray(arrayInt);
         System.out.println("----------------------------");
     }
 }
