@@ -1,6 +1,9 @@
 package lesson_3;
 
-public class Utils {
+public class Lesson3Utils {
+    public static final int MIN = -10;
+    public static final int MAX = 10;
+
     private static int getRandom(int min, int max) {
         return (int) (Math.random() * (max - min)) + min;
     }

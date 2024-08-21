@@ -1,17 +1,17 @@
 import lesson_3.Lesson3Tasks;
 import lesson_3.Lesson3Utils;
+import lesson_3.Utils;
 
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    private static final int MIN = -10;
-    private static final int MAX = 10;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sizeArray = scanner.nextInt();
-        int[] arrayInt = Lesson3Utils.generatRndArray(sizeArray, MIN, MAX);
+        int[] arrayInt = Lesson3Utils.generatRndArray(sizeArray, Lesson3Utils.MIN, Lesson3Utils.MAX);
 
         System.out.print("array = ");
         Lesson3Utils.printArray(arrayInt);
