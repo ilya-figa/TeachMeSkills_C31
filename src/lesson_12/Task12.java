@@ -6,7 +6,7 @@ public class Task12 {
     public static void printAbbreviation(String text){
         String[] words = text.split(" ");
         for(String word: words){
-            if(Pattern.matches("[A-Z]+", word)){
+            if(Pattern.matches("[A-Z]{2,6}", word)){
                 System.out.println(word);
             }
         }
