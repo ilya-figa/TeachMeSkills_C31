@@ -32,22 +32,14 @@ public class Lesson11Tasks {
     }
 
     public static void belowAverage(String[] strings) {
-        int l0 = strings[0].length();
-        int l1 = strings[1].length();
-        int l2 = strings[2].length();
-
-        int averageInt;
-
-        if (((l0 > l1) && (l0 < l2)) || ((l0 < l1) && (l0 > l2))) {
-            averageInt = l0;
-        } else if (((l1 > l0) && (l1 < l2)) || ((l1 < l0) && (l1 > l2))) {
-            averageInt = l1;
-        } else {
-            averageInt = l2;
+        int average = 0;
+        for(String str :strings){
+            average += str.length();
         }
+        average /= strings.length;
 
         for(String str:strings){
-            if(str.length() < averageInt){
+            if(str.length() < average){
                 System.out.println("String = " + str + "; length =" + str.length());
             }
         }
