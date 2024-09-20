@@ -23,12 +23,29 @@ public class FileUtils {
         return stringBuilder;
     }
 
-    public static void writeFile(String path, String stringBuilder) {
+    public static void writeFile(String path, String string) {
         try (FileWriter writer = new FileWriter(path, false)) {
-            writer.write(stringBuilder);
+            writer.write(string);
             writer.flush();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
+    }
+
+    public static void writeObject(String path, Object object) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(path))) {
+            oos.writeObject(object);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public static Object readObject(String path) {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path))) {
+            return ois.readObject();
+        } catch (IOException | ClassNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return null;
     }
 }
