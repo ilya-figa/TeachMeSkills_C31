@@ -3,6 +3,7 @@ import lesson15.task2.Aminal;
 import lesson15.task2.Zoo;
 import lesson15.task3.College;
 import lesson15.task3.Student;
+import lesson15.task4.NewArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,5 +32,21 @@ public class Main {
         college.printStudents();
         college.printStudents(2);
 
+        NewArrayList<Student> studentNewArrayList = new NewArrayList<>();
+        studentNewArrayList.add(new Student("1", "1", 1, 1));
+        studentNewArrayList.add(new Student("2", "3", 1, 2.9));
+        studentNewArrayList.add(new Student("4", "5", 2, 3));
+        studentNewArrayList.add(new Student("6", "7", 1, 4.5));
+        studentNewArrayList.add(new Student("8", "9", 4, 2));
+        studentNewArrayList.add(new Student("10", "11", 3, 3.1));
+
+        studentNewArrayList.print();
+
+        studentNewArrayList.remove();
+        System.out.println("----------------------------1");
+        studentNewArrayList.print();
+        studentNewArrayList.clear();
+        System.out.println("----------------------------2");
+        studentNewArrayList.print();
     }
 }
