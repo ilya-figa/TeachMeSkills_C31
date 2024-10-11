@@ -1,13 +1,9 @@
-import lesson_17.lessonpractice.IAOrB;
-import lesson_17.lessonpractice.IShape;
-import lesson_17.lessonpractice.LocalDateUtils;
-import lesson_17.lessonpractice.UserEvent;
-
-import java.time.LocalDate;
+import lesson_17.lessontask.TaskFunctionalInterface;
+import lesson_17.lessontask.TaskLocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(LocalDateUtils.getDayOfTheWeek(LocalDate.now()));
+        /*System.out.println(LocalDateUtils.getDayOfTheWeek(LocalDate.now()));
         System.out.println(LocalDateUtils.getDateNextTuesday());
 
         IShape square = (a, b) -> Double.valueOf((a * b));
@@ -32,7 +28,7 @@ public class Main {
         userEvent.addNewEvent("4", "2024-10-09");
         userEvent.printSortedList();
 
-        LocalDateUtils.printCountDaysOff("2024-10-01", "2024-10-12");
+        LocalDateUtils.printCountDaysOff("2024-10-01", "2024-10-12");*/
 
         /*List<Integer> integerList = new ArrayList<>();
         integerList.add(3);
@@ -41,5 +37,15 @@ public class Main {
         integerList.add(4);*/
         //sorted
 
+        //task1
+        System.out.println(TaskLocalDate.get100Years("1999-05-18"));
+        //task2
+        TaskFunctionalInterface.printOnlyPositive(new int[]{-1,2,-3,4,-5});
+        //task3
+        System.out.println(TaskFunctionalInterface.getFunctionBYNtoUSD().apply("10 BYN"));
+        //task4
+        TaskFunctionalInterface.getConsumerBYNtoUSD().accept("10 BYN");
+        //task5
+        System.out.println(TaskFunctionalInterface.getSupplierReverseStr().get());
     }
 }
